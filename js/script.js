@@ -13,19 +13,14 @@ if(paliOrNot == true){
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri. Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
 var pariDispari = prompt('pari o dispari?');
-console.log(pariDispari);
 
 var userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
-console.log('il numero che hai scelto è ' + userNumber);
 
 var pcNumber = randomNum(1, 5);
-console.log('il numero random del pc è ' + pcNumber);
 
 var somma = userNumber + pcNumber;
-console.log('la somma del numero che hai scelto e del numero random del pc è ' + somma);
 
 var winner = pariOrNot(somma);
-console.log(winner);
 
 if(winner == true && pariDispari == 'pari' || winner == false && pariDispari == 'dispari'){
     document.getElementById('pari-dispari').innerHTML = 'Hai vinto!';
